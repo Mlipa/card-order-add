@@ -1,0 +1,158 @@
+:root{
+    /* primary colors */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* neutral color */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+    /* ancor color */
+    --a-color: hsl(228, 45%, 44%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--Desaturated-blue);
+}
+
+.container-everything {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.principal-title {
+    color: white;
+}
+
+.containers-btn button {
+    margin: 8px;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 10px;
+    border-color: var(--Dark-blue);
+    background-color: var(--Dark-blue);
+    color: white;
+}
+
+.container-targets {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 32px;
+}
+
+.target {
+    max-width: 400px;
+    border-radius: 16px;
+    background-color: transparent;
+    margin: 32px auto;
+}
+
+.target:hover {
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.70);
+}
+
+.target header img {
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    transition: all 500ms ease;
+    position: absolute;
+    border-radius: 16px;
+    transform: scale(1);
+    transition: .5s ease;
+}
+
+.target header img:hover{
+    transform: scale(0);
+    overflow: hidden;
+}
+
+.target main h1 {
+    text-align: center;
+    margin: 18px;
+    font-weight: 900;
+    color: white;
+}
+
+.target main p {
+    text-align: center;
+    margin: 18px;
+    color: white;
+}
+
+.plan {
+    display: flex;
+    background-color: var(--Very-pale-blue);
+    margin: 16px;
+    justify-content: space-around;
+    padding: 16px;
+    border-radius: 16px;
+    align-items: center;
+}
+
+.plan .div2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan .div2 .span1 {
+    font-weight: 900;
+}
+
+.plan .div3 a {
+    color: var(--a-color);
+    font-weight: 900;
+}
+
+.fooder {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 18px;
+}
+
+.fooder .button1 {
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 18px;
+    border-color: var(--Very-pale-blue);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.fooder .button2 {
+    padding: 10px;
+    background-color: transparent;
+    border-width: 0;
+    font-size: 18px;
+    border-color: var(--Very-pale-blue);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 375px) {
+    .target header img {
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .target header img {
+        width: 280px;
+    }
+}
+
+
+
+
+
