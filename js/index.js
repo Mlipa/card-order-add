@@ -94,6 +94,7 @@ const removeCard = () => {
       switch (parseInt(numberTarget)) {
         case 1:
           elementsbtn.children[1].setAttribute("class","btn-remove");
+          elementsbtn.children[2].setAttribute("class","btn-clearAll");
         break;
         case 2:
           elementsbtn.children[2].setAttribute("class","btn-clearAll");
@@ -110,6 +111,9 @@ const clearAllCard = () => {
     appCard.removeChild(deleteTargets);
     elementsbtn.children[1].setAttribute("class","btn-remove");
     elementsbtn.children[2].setAttribute("class","btn-clearAll");
+    if (number === 1){
+      numberTarget = 1;
+    }
   }
 };
 
