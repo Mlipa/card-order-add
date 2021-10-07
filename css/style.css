@@ -32,14 +32,35 @@ body {
     color: white;
 }
 
+.containers-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
 .containers-btn button {
-    margin: 8px;
     font-size: 24px;
     padding: 8px;
     border-radius: 10px;
     border-color: var(--Dark-blue);
     background-color: var(--Dark-blue);
     color: white;
+}
+
+.btn-remove {
+    display: none;
+}
+
+.btn-remove-desactive {
+    display: block;
+}
+
+.btn-clearAll {
+    display: none;
+}
+
+.btn-clearAll-desactive {
+    display: block;
 }
 
 .container-targets {

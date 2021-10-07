@@ -75,20 +75,44 @@ const createCard = () => {
 };
 
 const appCard = document.querySelector("#app");
+const elementsbtn = document.querySelector(".containers-btn");
 const addCardButton = document.querySelector("#add");
 const removeCardButton = document.querySelector("#remove");
+const clearAllButton = document.querySelector("#clearAll");
 
 const addCard = () => {
   appCard.appendChild(createCard());
+  elementsbtn.children[1].setAttribute("class","btn-remove-desactive");
+  elementsbtn.children[2].setAttribute("class","btn-clearAll-desactive");
 };
 
 const removeCard = () => {
     if (numberTarget > 0) {
-        parseInt(numberTarget --);
-        const deleteTarget = document.getElementById("target" + numberTarget);
-        appCard.removeChild(deleteTarget);
+      parseInt(numberTarget --);
+      const deleteTarget = document.getElementById("target" + numberTarget);
+      appCard.removeChild(deleteTarget);
+      switch (parseInt(numberTarget)) {
+        case 1:
+          elementsbtn.children[1].setAttribute("class","btn-remove");
+        break;
+        case 2:
+          elementsbtn.children[2].setAttribute("class","btn-clearAll");
+        break;
+      }
     }
+};
+
+const clearAllCard = () => {
+  var number = numberTarget;
+  for (var i = 0; i < numberTarget; i++) {
+    parseInt(number --);
+    const deleteTargets = document.getElementById("target" + number);
+    appCard.removeChild(deleteTargets);
+    elementsbtn.children[1].setAttribute("class","btn-remove");
+    elementsbtn.children[2].setAttribute("class","btn-clearAll");
+  }
 };
 
 addCardButton.addEventListener("click", addCard);
 removeCardButton.addEventListener("click", removeCard);
+clearAllButton.addEventListener("click", clearAllCard);
